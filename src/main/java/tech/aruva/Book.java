@@ -8,15 +8,21 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
-public class Book {
+//@ToString(callSuper = true)
+@ToString(onlyExplicitlyIncluded = true)
+public class Book extends Publication{
 
+    @ToString.Include
     private String title;
+
     private int noOfPages;
+
+    @ToString.Include
     private String author;
-    private String publisher;
     private String isbn;
     boolean available;
 
-    public Book() {}
+    public Book(String publisher) {
+        super(publisher);
+    }
 }

@@ -16,6 +16,7 @@ For reference, here are the various tags that can be checked-out to clone a dire
 | 0.6     | 005-fluent-chain-style      | `git checkout tags/005-fluent-chain-style`      |
 | 1.1     | 101-config-accessors-prefix | `git checkout tags/101-config-accessors-prefix` |
 | 1.2     | 102-delombok-maven-plugin   | `git checkout tags/102-delombok-maven-plugin`   |
+| 1.3     | 103-tostring-configurations | `git checkout tags/103-tostring-configurations` |
 
 
 

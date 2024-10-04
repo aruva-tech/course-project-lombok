@@ -4,10 +4,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        Book book = new Book()
+        Book book = new Book("Constructor Publisher")
                 .setIsbn("isbn1001")
                 .setAuthor("Author")
-                .setPublisher("Publisher")
                 .setTitle("Title")
                 .setNoOfPages(200)
                 .setAvailable(false);
