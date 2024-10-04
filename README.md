@@ -14,7 +14,8 @@ For reference, here are the various tags that can be checked-out to clone a dire
 | 0.4     | 003-access-level-setup      | `git checkout tags/003-access-level-setup`      |
 | 0.5     | 004-suppress-getter-setter  | `git checkout tags/004-suppress-getter-setter`  |
 | 0.6     | 005-fluent-chain-style      | `git checkout tags/005-fluent-chain-style`      |
-| 1.1     | 101-config-accessors-prefix | `git checkout tags/101-config-accessors-prefix` | 
+| 1.1     | 101-config-accessors-prefix | `git checkout tags/101-config-accessors-prefix` |
+| 1.2     | 102-delombok-maven-plugin   | `git checkout tags/102-delombok-maven-plugin`   |
 
 
 
