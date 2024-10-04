@@ -10,5 +10,7 @@ For reference, here are the various tags that can be checked-out to clone a dire
 |---------|---------------------------|-----------------------------------------------|
 | 0.1     | initial-base              | `git checkout tags/initial-base`              |
 | 0.2     | 001-sample-project-setup  | `git checkout tags/001-sample-project-setup`  |
+| 0.3     | 002-field-getter-setter   | `git checkout tags/002-field-getter-setter`   |
+
 
 
