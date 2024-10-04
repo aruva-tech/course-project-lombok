@@ -3,12 +3,10 @@ package tech.aruva;
 import lombok.*;
 
 
-@Getter
-@Setter
-@ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = false, onlyExplicitlyIncluded = false)
-@RequiredArgsConstructor(access = AccessLevel.PRIVATE)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Data
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class Book extends Publication{
 
     @NonNull

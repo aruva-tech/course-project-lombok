@@ -20,6 +20,7 @@ For reference, here are the various tags that can be checked-out to clone a dire
 | 1.4     | 104-equalsandhashcode-configurations | `git checkout tags/104-equalsandhashcode-configurations` |
 | 1.5     | 105-nonnull-exception-types          | `git checkout tags/105-nonnull-exception-types`          |
 | 1.6     | 106-constructors-and-configurations  | `git checkout tags/106-constructors-and-configurations`  |
+| 1.7     | 107-data-annotation                  | `git checkout tags/107-data-annotation`                  |
 
 
 
