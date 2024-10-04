@@ -10,19 +10,18 @@ public class App
                 .available(true)
                 .isbn("978-0134685991");
 
-        Book book2 = new Book("Addison-Wesley")
-                .title("Effective Java")
-                .author("Joshua Bloch")
-                .available(false)
-                .isbn("978-0134685991");
+        try {
+            Book book2 = new Book(null); //deliberately triggering an error
+        } catch (NullPointerException e) {
+            System.out.println("Caught Exception: " + e.getMessage());
+        }
+
+        try {
+            book1.updateIsbn(null);
+        } catch (NullPointerException e) {
+            System.out.println("Caught Exception: " + e.getMessage());
+        }
 
         System.out.println(book1);
-        System.out.println(book2);
-
-        System.out.println("book1 equals book2? " + book1.equals(book2));
-
-
-
-
     }
 }
