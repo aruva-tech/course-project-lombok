@@ -6,12 +6,13 @@ This course covers all important aspects of Lombok and provides insight into adv
 
 For reference, here are the various tags that can be checked-out to clone a direct version from the branch
 
-| Section | Tag                      | Command to Checkout                          |
-|---------|--------------------------|----------------------------------------------|
-| 0.1     | initial-base             | `git checkout tags/initial-base`             |
-| 0.2     | 001-sample-project-setup | `git checkout tags/001-sample-project-setup` |
-| 0.3     | 002-field-getter-setter  | `git checkout tags/002-field-getter-setter`  |
-| 0.4     | 003-access-level-setup   | `git checkout tags/003-access-level-setup`   |
+| Section | Tag                          | Command to Checkout                             |
+|---------|------------------------------|-------------------------------------------------|
+| 0.1     | initial-base                 | `git checkout tags/initial-base`                |
+| 0.2     | 001-sample-project-setup     | `git checkout tags/001-sample-project-setup`    |
+| 0.3     | 002-field-getter-setter      | `git checkout tags/002-field-getter-setter`     |
+| 0.4     | 003-access-level-setup       | `git checkout tags/003-access-level-setup`      |
+| 0.5     | 004-suppress-getter-setter   | `git checkout tags/004-suppress-getter-setter`  |
 
 
 
