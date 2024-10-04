@@ -4,8 +4,10 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.Accessors;
 
 @ToString
+@Accessors(fluent = true, chain = true)
 public class Book {
 
     @Getter @Setter

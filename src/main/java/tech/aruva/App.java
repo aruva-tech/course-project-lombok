@@ -4,16 +4,16 @@ public class App
 {
     public static void main( String[] args )
     {
-        Book book = new Book("Constructor Publishing House");
-        book.setAuthor("Author Name");
-        book.setTitle("Title");
-        // book.setPublisher("Publishing House");
-        book.setIsbn("1234567890");
+        Book book = new Book()
+                .isbn("isbn0001")
+                .author("Fluent Author")
+                //note: not accessible as setter is PRIVATE
+                //.publisher("Fluent Publisher")
+                .title("Fluent Title");
 
-        // note: the getAuthor() method is not available
-        //System.out.println(book.getAuthor());
+        //note: using book.title() instead of book.getTitle()
+        System.out.println( book.title() );
 
-        // note: the ToString() has access to private variables directly
         System.out.println( book );
 
     }
