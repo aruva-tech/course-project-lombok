@@ -18,7 +18,8 @@ For reference, here are the various tags that can be checked-out to clone a dire
 | 1.2     | 102-delombok-maven-plugin            | `git checkout tags/102-delombok-maven-plugin`            |
 | 1.3     | 103-tostring-configurations          | `git checkout tags/103-tostring-configurations`          |
 | 1.4     | 104-equalsandhashcode-configurations | `git checkout tags/104-equalsandhashcode-configurations` |
-| 1.5     | 105-nonnull-exception-types          | `git checkout tags/105-nonnull-exception-types`          | 
+| 1.5     | 105-nonnull-exception-types          | `git checkout tags/105-nonnull-exception-types`          |
+| 1.6     | 106-constructors-and-configurations  | `git checkout tags/106-constructors-and-configurations`  |
 
 
 

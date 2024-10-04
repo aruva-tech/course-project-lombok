@@ -4,24 +4,18 @@ public class App
 {
     public static void main( String[] args )
     {
-        Book book1 = new Book("Addison-Wesley")
-                .title("Effective Java")
-                .author("Joshua Bloch")
-                .available(true)
-                .isbn("978-0134685991");
+       // note: as constructors are PRIVATE this will fail
+       // Book book = new Book("Simple Title", "Author", "324-347854394");
 
-        try {
-            Book book2 = new Book(null); //deliberately triggering an error
-        } catch (NullPointerException e) {
-            System.out.println("Caught Exception: " + e.getMessage());
-        }
+        Book standardBook = Book.of("standard Title",150,"standard author", "123-4567890");
 
-        try {
-            book1.updateIsbn(null);
-        } catch (NullPointerException e) {
-            System.out.println("Caught Exception: " + e.getMessage());
-        }
+        Book availableBook = Book.availableBook("available Title",260,"available author", "123-4567890");
 
-        System.out.println(book1);
+        Book defaultBook = Book.defaultBook("default Title","default author");
+
+        System.out.println(standardBook);
+        System.out.println(availableBook);
+        System.out.println(defaultBook);
+
     }
 }
