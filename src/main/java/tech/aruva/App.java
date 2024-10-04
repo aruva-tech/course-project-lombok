@@ -4,23 +4,25 @@ public class App
 {
     public static void main( String[] args )
     {
-        Book book = new Book("Constructor Publisher")
-                .setIsbn("isbn1001")
-                .setAuthor("Author")
-                .setTitle("Title")
-                .setNoOfPages(200)
-                .setAvailable(false);
+        Book book1 = new Book("Addison-Wesley")
+                .title("Effective Java")
+                .author("Joshua Bloch")
+                .available(true)
+                .isbn("978-0134685991");
+
+        Book book2 = new Book("Addison-Wesley")
+                .title("Effective Java")
+                .author("Joshua Bloch")
+                .available(false)
+                .isbn("978-0134685991");
+
+        System.out.println(book1);
+        System.out.println(book2);
+
+        System.out.println("book1 equals book2? " + book1.equals(book2));
 
 
 
-        System.out.println("Book Details: " + book);
-        System.out.println("No Of Pages: " + book.getNoOfPages());
-
-        // note: when lombok.getter.noIsPrefix = true -> use getAvailable()
-        System.out.println( book.getAvailable() ? "Available" : "Not Available" );
-
-        // note: default: use isAvailable()
-        //System.out.println( book.isAvailable() ? "Available" : "Not Available" );
 
     }
 }
