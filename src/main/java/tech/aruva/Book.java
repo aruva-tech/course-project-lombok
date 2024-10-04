@@ -11,7 +11,7 @@ public class Book {
     @Getter @Setter
     private String title;
 
-    @Getter @Setter
+    @Getter(AccessLevel.NONE) @Setter
     private String author;
 
     @Getter @Setter(AccessLevel.PRIVATE)
