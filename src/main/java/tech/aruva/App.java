@@ -1,21 +1,32 @@
 package tech.aruva;
 
-public class App
-{
-    public static void main( String[] args )
-    {
-       // note: as constructors are PRIVATE this will fail
-       // Book book = new Book("Simple Title", "Author", "324-347854394");
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
-        Book standardBook = Book.of("standard Title",150,"standard author", "123-4567890");
+public class App {
+    public static void main(String[] args) {
+        ObjectMapper mapper = new ObjectMapper();
 
-        Book availableBook = Book.availableBook("available Title",260,"available author", "123-4567890");
+        // Building a Book instance using Lombok's Builder
+        Book book = Book.builder()
+                .title("Effective Java")
+                .author("Joshua Bloch")
+                .bestseller(true)
+                .isbn("978-0134685991")
+                .genre("Programming")
+                .genre("Java")
+                .build();
 
-        Book defaultBook = Book.defaultBook("default Title","default author");
+        try {
+            // Serializing Book to JSON
+            String jsonString = mapper.writeValueAsString(book);
+            System.out.println("Serialized JSON:\n" + jsonString);
 
-        System.out.println(standardBook);
-        System.out.println(availableBook);
-        System.out.println(defaultBook);
-
+            // Deserializing JSON back to Book
+            Book deserializedBook = mapper.readValue(jsonString, Book.class);
+            System.out.println("\nDeserialized Book:\n" + deserializedBook);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
     }
 }

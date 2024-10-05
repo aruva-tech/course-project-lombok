@@ -1,45 +1,37 @@
 package tech.aruva;
 
-import lombok.*;
-
+import lombok.Builder;
+import lombok.Singular;
+import lombok.Data;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Data
-@NoArgsConstructor
-@RequiredArgsConstructor
-@AllArgsConstructor
-public class Book extends Publication{
-
-    @NonNull
+@Builder
+@JsonDeserialize(builder = Book.BookBuilder.class)
+public class Book {
+    @NotNull
+    @JsonProperty("title")
     private String title;
-    private int noOfPages;
 
-    @NonNull
+    @NotNull
+    @JsonProperty("author")
     private String author;
 
-    @NonNull
+    private boolean bestseller;
+
+    @NotNull
+    @JsonProperty("isbn")
     private String isbn;
 
-    @EqualsAndHashCode.Exclude
-    boolean available;
+    @Singular
+    private List<String> genres;
 
-    public Book(@NonNull String publisher) {
-        super(publisher);
+    @JsonPOJOBuilder(withPrefix = "")
+    public static class BookBuilder {
+        // Lombok generates this class
     }
-
-    public void updateIsbn(@NonNull String isbn){
-        this.isbn = isbn;
-    }
-
-    public static Book of(String title, int noOfPages, String author, String isbn){
-        return new Book(title, noOfPages, author, isbn, true);
-    }
-
-    public static Book availableBook(String title, int noOfPages, String author, String isbn){
-        return new Book(title, noOfPages, author, isbn, false);
-    }
-
-    public static Book defaultBook(String title, String author){
-        return new Book(title, 500, author, "000-0000000000", true);
-    }
-
 }
