@@ -17,6 +17,9 @@ public class App {
                 .genre("Java")
                 .build();
 
+        // Logging book details
+        book.logBookDetails();
+
         try {
             // Serializing Book to JSON
             String jsonString = mapper.writeValueAsString(book);
@@ -25,6 +28,9 @@ public class App {
             // Deserializing JSON back to Book
             Book deserializedBook = mapper.readValue(jsonString, Book.class);
             System.out.println("\nDeserialized Book:\n" + deserializedBook);
+
+            // Logging deserialized book details
+            deserializedBook.logBookDetails();
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
