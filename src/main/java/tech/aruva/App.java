@@ -20,6 +20,10 @@ public class App {
         // Logging book details
         book.logBookDetails();
 
+        Book book2 = book.withTitle("Java Lombok").withAuthor("Aruva Tech");
+
+        book2.logBookDetails();
+
         try {
             // Serializing Book to JSON
             String jsonString = mapper.writeValueAsString(book);
