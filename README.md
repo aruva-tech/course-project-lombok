@@ -22,6 +22,7 @@ For reference, here are the various tags that can be checked-out to clone a dire
 | 1.6     | 106-constructors-and-configurations  | `git checkout tags/106-constructors-and-configurations`  |
 | 1.7     | 107-data-annotation                  | `git checkout tags/107-data-annotation`                  |
 | 2.1     | 201-builder-annotation               | `git checkout tags/201-builder-annotation`               |
+| 2.2     | 202-value-annotation                 | `git checkout tags/202-value-annotation`                 |               
 
 
 

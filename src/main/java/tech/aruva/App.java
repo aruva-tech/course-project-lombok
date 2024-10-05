@@ -28,5 +28,15 @@ public class App {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
+
+        // Attempting to build a Book with a null title (should throw exception)
+        try {
+            Book invalidBook = Book.builder()
+                    .author("Unknown Author")
+                    .isbn("000-0000000000")
+                    .build();
+        } catch (NullPointerException e) {
+            System.out.println("\nCaught exception while building invalid book: " + e.getMessage());
+        }
     }
 }

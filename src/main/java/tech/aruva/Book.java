@@ -1,37 +1,39 @@
 package tech.aruva;
 
 import lombok.Builder;
+import lombok.Value;
 import lombok.Singular;
-import lombok.Data;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.constraints.NotNull;
+import com.google.common.collect.ImmutableList;
 import java.util.List;
 
-@Data
+@Value
 @Builder
-@JsonDeserialize(builder = Book.BookBuilder.class)
+@JsonDeserialize(builder = Book.CustomBookBuilder.class)
 public class Book {
     @NotNull
     @JsonProperty("title")
-    private String title;
+    String title;
 
     @NotNull
     @JsonProperty("author")
-    private String author;
+    String author;
 
-    private boolean bestseller;
+    boolean bestseller;
 
     @NotNull
     @JsonProperty("isbn")
-    private String isbn;
+    String isbn;
 
     @Singular
-    private List<String> genres;
+    @JsonProperty("genres")
+    ImmutableList<String> genres;
 
     @JsonPOJOBuilder(withPrefix = "")
-    public static class BookBuilder {
-        // Lombok generates this class
+    public static class CustomBookBuilder {
+        // Lombok generates this class using Guava's ImmutableList.Builder
     }
 }
